@@ -1,7 +1,7 @@
 
 # $Id: Makefile,v 1.6 2013-09-24 19:07:20-07 sglaser Exp $
 
-BIN=/home/sglaser/bin
+BIN=/usr/local/bin
 
 all : $(BIN)/c2ps $(BIN)/count
 
