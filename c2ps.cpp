@@ -992,14 +992,14 @@ void ResetTimbuf() {
 #endif
     if ((lt->tm_min == 0) && (lt->tm_sec == 0)
         && ((lt->tm_hour == 0) || (lt->tm_hour == 12))) {
-        sprintf(timbuf, "%s %d %s %04d at %s",
+        snprintf(timbuf, sizeof(timbuf), "%s %d %s %04d at %s",
                 wday[lt->tm_wday],
                 lt->tm_mday,
                 month[lt->tm_mon],
                 lt->tm_year + 1900,
                 lt->tm_hour == 0 ? "12 midnight" : "12 noon");
     } else {
-        sprintf(timbuf, "%s  %d %s %04d at %02d:%02d:%02d %s",
+        snprintf(timbuf, sizeof(timbuf), "%s  %d %s %04d at %02d:%02d:%02d %s",
                 wday[lt->tm_wday],
                 lt->tm_mday,
                 month[lt->tm_mon],
